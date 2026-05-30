@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Healthcare Assistant Agent</h1>
+
+    <h2>Doctor Appointment Booking</h2>
+
+    <form method="POST">
+
+        <input type="text" name="name" placeholder="Patient Name">
+
+        <input type="text" name="doctor" placeholder="Doctor Name">
+
+        <input type="date" name="date">
+
+        <button type="submit">Book Appointment</button>
+
+        <h3>{{ appointment_message }}</h3>
+
+        <hr>
+
+        <h2>Medicine Suggestion</h2>
+
+        <input type="text" name="symptom" placeholder="Enter Your Symptoms">
+
+        <button type="submit">Suggest Medicine</button>
+
+        <h3>{{ medicine_message }}</h3>
+
+    </form>
+
+</div>
+
+</body>
+</html>
